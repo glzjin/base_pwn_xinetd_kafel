@@ -1,4 +1,4 @@
-FROM ubuntu:16.04 as build-stage
+FROM ubuntu:xenial-20210114 as build-stage
 
 WORKDIR /opt
 
@@ -26,7 +26,7 @@ RUN wget https://github.com/Asuri-Team/xinetd-kafel/archive/master.zip && \
     ./configure --prefix=/usr --with-kafel=/opt/kafel --with-loadavg --with-libwrap && \
     make
 
-FROM ubuntu:16.04
+FROM ubuntu:xenial-20210114
 
 LABEL Organization="CTFTraining" Author="Virink <virink@outlook.com>"
 MAINTAINER Virink@CTFTraining <virink@outlook.com>
